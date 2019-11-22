@@ -8,12 +8,30 @@ import { BrowserWindow, dialog } from 'electron'
 const PreviewStyle = styled.section`
   padding: 16px;
   flex: 1;
-  background-color: ${colors.lighten1};
+  background-color: ${colors.darken3};
   line-height: 1.75;
+
+  * {
+    font-size: ${(props: { textSize: number }) => HeadSize(2, props.textSize)};
+  }
 
   ul {
     margin-left: 32px;
     font-size: ${(props: { textSize: number }) => HeadSize(2, props.textSize)};
+  }
+
+  p {
+    /* ｀hogehoge｀ */
+    code {
+      padding: 0.5px 6px;
+      color: ${colors.accent1};
+      background-color: ${colors.darken4};
+    }
+  }
+
+  pre {
+    color: ${colors.lighten4};
+    background-color: ${colors.darken3};
   }
 
   h1 {

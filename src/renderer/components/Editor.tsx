@@ -14,7 +14,6 @@ const Navbar = styled.nav`
 const EditorStyle = styled(Vertical)`
   flex: 1;
   padding: 24px;
-  background-color: ${colors.lighten5};
 `
 
 const Main = styled(Horizontal)`
@@ -25,7 +24,7 @@ const Editor: FunctionComponent<{}> = ({}) => {
   const textSize: number[] = [8, 10, 12, 14, 18, 24, 36]
 
   const [showText, setText] = useState<string>('')
-  const [getTextSize, setTextSize] = useState<number>(20)
+  const [getTextSize, setTextSize] = useState<number>(8)
 
   const updateText = useCallback(
     e => {
@@ -52,7 +51,7 @@ const Editor: FunctionComponent<{}> = ({}) => {
         </form>
       </Navbar>
       <Main>
-        <TextField updateText={updateText} />
+        <TextField updateText={updateText} textSize={getTextSize} />
         <Preview showText={showText} textSize={getTextSize} />
       </Main>
     </EditorStyle>

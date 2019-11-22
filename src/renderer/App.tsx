@@ -9,6 +9,7 @@ const AppStyle = styled(Horizontal)`
   width: 100vw;
   min-width: 300px;
   height: 100vh;
+  background-color: ${colors.darken4};
 `
 
 const NavStyle = styled.nav`
