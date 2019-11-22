@@ -108,4 +108,9 @@ input, select {
   height: 100%;
   width: 100%;
 }
+
+ul li, ol li {
+  line-height: 1.5;
+  padding: 0.5em 0;
+}
 `

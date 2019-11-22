@@ -13,10 +13,10 @@ const EditorStyle = styled(Horizontal)`
 `
 
 const Editor: FunctionComponent<{}> = ({}) => {
-  const [showText, setText] = useState<String>('')
+  const [showText, setText] = useState<string>('')
   const updateText = useCallback(
     e => {
-      setText(e.target.value)
+      setText(marked(e.target.value))
     },
     [setText]
   )
