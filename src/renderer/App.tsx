@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { GlobalStyle } from 'styles/Index'
 import Horizontal from './components/layouts/Horizontal'
 import colors from 'constants/colors'
+import Editor from './components/Editor'
 
 const AppStyle = styled(Horizontal)`
   width: 100vw;
@@ -27,7 +28,7 @@ const App: FunctionComponent<{}> = ({}) => {
       {/* <header /> */}
       <AppStyle>
         <NavStyle />
-        <MainStyle />
+        <Editor />
       </AppStyle>
       {/* <footer></footer> */}
     </>
