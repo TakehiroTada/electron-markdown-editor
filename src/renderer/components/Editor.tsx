@@ -22,6 +22,8 @@ const Main = styled(Horizontal)`
 `
 
 const Editor: FunctionComponent<{}> = ({}) => {
+  const textSize: number[] = [8, 10, 12, 14, 18, 24, 36]
+
   const [showText, setText] = useState<string>('')
   const [getTextSize, setTextSize] = useState<number>(20)
 
@@ -43,11 +45,9 @@ const Editor: FunctionComponent<{}> = ({}) => {
       <Navbar>
         <form>
           <select name="フォントサイズ" onChange={updateTextSize}>
-            <option value="16">16</option>
-            <option value="20" selected>
-              20
-            </option>
-            <option value="24">24</option>
+            {textSize.map((size: number, key: number) => (
+              <option value={size}>{size}</option>
+            ))}
           </select>
         </form>
       </Navbar>
