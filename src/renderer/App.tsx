@@ -27,7 +27,7 @@ const App: FunctionComponent<{}> = ({}) => {
       <GlobalStyle />
       {/* <header /> */}
       <AppStyle>
-        <NavStyle />
+        {/* <NavStyle /> */}
         <Editor />
       </AppStyle>
       {/* <footer></footer> */}

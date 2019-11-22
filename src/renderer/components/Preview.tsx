@@ -13,37 +13,39 @@ const PreviewStyle = styled.section`
 
   ul {
     margin-left: 32px;
+    font-size: ${(props: { textSize: number }) => HeadSize(2, props.textSize)};
   }
 
   h1 {
-    font-size: ${HeadSize(6)};
+    font-size: ${(props: { textSize: number }) => HeadSize(6, props.textSize)};
     padding-bottom: 8px;
     border-bottom: ${'solid 1px' + colors.darken4};
   }
 
   h2 {
-    font-size: ${HeadSize(5)};
+    font-size: ${(props: { textSize: number }) => HeadSize(5, props.textSize)};
   }
 
   h3 {
-    font-size: ${HeadSize(4)};
+    font-size: ${(props: { textSize: number }) => HeadSize(4, props.textSize)};
   }
 
   h4 {
-    font-size: ${HeadSize(3)};
+    font-size: ${(props: { textSize: number }) => HeadSize(3, props.textSize)};
   }
 
   h5 {
-    font-size: ${HeadSize(2)};
+    font-size: ${(props: { textSize: number }) => HeadSize(2, props.textSize)};
   }
 
   h6 {
-    font-size: ${HeadSize(1)};
+    font-size: ${(props: { textSize: number }) => HeadSize(1, props.textSize)};
   }
 `
-const Preview: FunctionComponent<{ showText: string }> = ({ showText }) => {
+const Preview: FunctionComponent<{ showText: string; textSize: number }> = ({ showText, textSize }) => {
   return (
     <PreviewStyle
+      textSize={textSize}
       dangerouslySetInnerHTML={{
         __html: showText
       }}
